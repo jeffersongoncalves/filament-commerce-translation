@@ -2,7 +2,7 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Translation\Resources\Translation\Tables;
 
-use Filament\Actions;
+use Filament\Tables\Actions;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -24,11 +24,11 @@ class TranslationTable
                 TextColumn::make('value')
                     ->toggleable(),
             ])
-            ->recordActions([
+            ->actions([
                 Actions\EditAction::make(),
                 Actions\DeleteAction::make(),
             ])
-            ->toolbarActions([
+            ->bulkActions([
                 Actions\BulkActionGroup::make([
                     Actions\DeleteBulkAction::make(),
                 ]),
