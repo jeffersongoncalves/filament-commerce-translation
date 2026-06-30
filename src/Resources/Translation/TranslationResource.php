@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Translation\Resources\Translation;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Translation\Models\Translation;
 use JeffersonGoncalves\FilamentCommerce\Translation\CommerceTranslationPlugin;
@@ -26,9 +26,9 @@ class TranslationResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return TranslationForm::configure($schema);
+        return TranslationForm::configure($form);
     }
 
     public static function table(Table $table): Table
